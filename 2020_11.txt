@@ -1,0 +1,257 @@
+
+
+----------==========----------==========----------==========----------
+
+
+"Eat Your Own Catfood."
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/11/30
+
+
+BUGFIX
+
+
+	game/game.c
+		Direct2D : n_game_on_paint()
+			OLD : crash at exit
+			NEW : fixed
+
+	win32/win/set.c
+		n_win_set() : N_WIN_SET_INNERPOS : when taskbar at top or left
+			OLD : misbehave
+			NEW : fixed
+		MinGW version : n_win_set()
+			OLD : inaccurate
+			NEW : fixed
+
+	CatPad
+		Win10 : Sync
+			OLD : hang-up in some cases
+			NEW : fixed
+	nmixer
+		sticky mode : tooltip
+			OLD : exe path
+			NEW : "nmixer"
+	Nonnon Freecell
+		Direct2D
+			OLD : blank screen at startup
+			NEW : fixed
+			[x] : BUGFIX @ 2020/11/20
+	Nonnon Paint
+		Alpha Tweaker : Reverse
+			OLD : do visible()
+			NEW : do reverse()
+			[x] : copy and paste error
+		Win10 : MinGW version : windowing
+			OLD : inaccurate
+			NEW : fixed
+	Nonnon Spider
+		Direct2D
+			OLD : blank screen at startup
+			NEW : fixed
+			[x] : BUGFIX @ 2020/11/20
+	OrangeCat
+		DnD to Breadcrumb
+			OLD : internal cofusion
+			NEW : fixed
+			[!] : UI will be halt
+
+
+NEW_FEATURE
+
+
+	neutral/bmp/table/*.c
+		released
+			NEW : faster code by the big pre-processed table
+
+	project/x64_sync.c
+		dark mode
+			NEW : supported
+
+	All
+		graphics
+			NEW : faster and lighter than older
+		memory debug facility
+			OLD : manually implemented
+			NEW : atexit() based
+		some apps : n_bmp_safemode
+			NEW : false
+			[!] : unsafe but faster than older
+	nmixer
+		window
+			NEW : animation available
+			[!] : except for Win7/Vista DWM
+			[!] : AnimateWindow() supports simple style only
+		sticky mode : double click
+			NEW : smoother than older
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/11/20
+
+
+BUGFIX
+
+
+	game/game.c
+		frame
+			NEW : inactive window is acceptable
+			[!] : for OrangeCat
+		show
+			OLD : ShowWindowAsync()
+			NEW : ShowWindow()
+			[?] : conflict with Direct2D
+			[!] : title bar will be gray at exit
+		Direct2D
+			OLD : not working
+			NEW : fixed
+
+	win32/win_txtbox/12_line.c
+		n_win_txtbox_line_select() : N_WIN_TXTBOX_STYLE_LISTBOX
+			OLD : misbehave when margin is clicked
+			NEW : fixed
+	win32/win_scrollbar.c
+		WM_TIMER : fade-out
+			OLD : condition is inaccurate
+			NEW : fixed
+			[!] : too many redraw count after 2020/11/10 release
+		n_win_scrollbar_on_drag() : N_WIN_SCROLLBAR_OPTION_NO_ARROWS
+			OLD : clamp is inaccurate
+			NEW : fixed
+
+	CatPad
+		Search Field : when resizing
+			OLD : flicker a little
+			NEW : fixed
+	Nonnon Paint
+		source code : filters
+			OLD : messy
+			NEW : refactored
+		redraw count
+			NEW : reduced
+	OrangeCat
+		main screen
+			OLD : no responce when inactive window
+			NEW : fixed
+			[x] : BUGFIX @ 2020/01/10
+		Resizer : Whole Preview is ON : preview
+			OLD : all layers are used
+			NEW : selected layer only
+
+
+NEW_FEATURE
+
+
+	win32/win_scrollbar.c
+		n_win_scrollbar_on_settingchange()
+			NEW : parameter "redraw" is added
+			[!] : usage is changed
+			[!] : for timing error
+
+	CatPad
+		WinVista/7 : DWM is ON : Search Field
+			NEW : re-tuned
+	Nonnon Paint
+		Multi-Layer : layer window : when appear
+			NEW : re-tuned
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/11/10
+
+
+BUGFIX
+
+
+	win32/win_colorpicker.c
+		menu is used : rendering
+			OLD : delayed
+			NEW : fixed
+
+	Nonnon Paint
+		Multi-Layer : Layer Window : when dropped the same folder
+			OLD : initial position
+			NEW : current position
+		Resizer : Input Field : Input Popup
+			OLD : not fade-out
+			NEW : fixed
+			[x] : ??? @ 2020/05/10
+		Resizer : Input Popup : Scroller "Rotate"
+			OLD : wheel is inputtable
+			NEW : fixed
+		Multi-Layer : Whole Preview
+			OLD : #0 is not used
+			NEW : fixed
+		Resizer : "Whole Preview"
+			OLD : not supported
+			NEW : fixed
+		Multi-Layer : Resizer : when applied
+			OLD : crash in some cases
+			NEW : fixed
+		Nonnon Apps : shortcut support
+			OLD : you cannot drop ".LNK" onto "Nonnon Paint.lnk"
+			NEW : fixed
+		Alpha Tweaker : target
+			OLD :     all layers
+			NEW : visible layers
+	Nyaursim
+		Plotter : menu-click : at startup
+			OLD : inputtable
+			NEW : fixed
+		Resizer : Input Field : Input Popup
+			OLD : not fade-out
+			NEW : fixed
+			[x] : ??? @ 2020/05/10
+
+
+NEW_FEATURE
+
+
+	neutral/bmp/*.c
+		blackness
+			NEW : removed
+			[?] : for how-to-use-this problem
+
+	win32/win_scroller.c
+		.canvas
+			NEW : removed
+			[!] : usage is changed
+			[?] : faster than older
+
+	Nonnon Paint
+		Resizer : Vanishing Point
+			NEW : you can set vanishing point
+			[!] : double click the preview to set
+			[!] : double menu-click to unset
+			[!] : set "Color Option" to apply
+		Resizer : "Blackness"
+			NEW : removed
+			[?] : for how-to-use-this problem
+		Multi-Layer : layer name on canvas margin
+			NEW : color alternation available
+			[!] : blue/pink alternation
+			[!] : for usability
+		Multi-Layer : Whole Preview
+			OLD : menu
+			NEW : checkbox
+
+
+----------==========----------==========----------==========----------
+
