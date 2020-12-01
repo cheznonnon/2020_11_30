@@ -12,6 +12,32 @@
 Change Log
 
 
+2020/11/30 #1 : 2020/12/01
+
+
+BUGFIX
+
+
+	nmixer
+		Win8.x : when theme is changed
+			OLD : misbehave
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	nmixer
+		Win8.x : border emulation
+			NEW : more similar than older
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2020/11/30
 
 
