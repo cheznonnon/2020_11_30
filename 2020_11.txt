@@ -12,6 +12,27 @@
 Change Log
 
 
+2020/11/30 #3 : 2020/12/14
+
+
+BUGFIX
+
+
+	Nonnon Paint
+		Resizer
+			OLD : debug code is enabled
+			NEW : fixed
+		Multi-Layer : Save : when saved : layer window
+			OLD : position is reset to initial position
+			NEW : fixed
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2020/11/30 #2 : 2020/12/14 : Recall
 
 
