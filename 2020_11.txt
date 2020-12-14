@@ -12,6 +12,24 @@
 Change Log
 
 
+2020/11/30 #2 : 2020/12/14 : Recall
+
+
+BUGFIX
+
+
+	Nonnon Paint
+		Multi-Layer : at the first save
+			OLD : data will be lost
+			NEW : fixed
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2020/11/30 #1 : 2020/12/01
 
 
