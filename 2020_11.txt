@@ -12,6 +12,25 @@
 Change Log
 
 
+2020/11/30 #4 : 2020/12/15
+
+
+BUGFIX
+
+
+	Nonnon Paint
+		Multi-Layer : Resizer : Rotate : "Per-Pixel Alpha Blending" is ON
+			OLD : crash
+			NEW : fixed
+			[x] : source code : n_paint_layer_canvas_grabber_pixel()
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2020/11/30 #3 : 2020/12/14
 
 
